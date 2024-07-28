@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "687238969060",
+    "project_id": "toylandapp",
+    "storage_bucket": "toylandapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:687238969060:android:25465030a518b71bc49ef1",
+        "android_client_info": {
+          "package_name": "com.vijayabhopathi.toyland"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2HqKtGIrPCvXGgYYCwaGTQ2acJFbBimc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
