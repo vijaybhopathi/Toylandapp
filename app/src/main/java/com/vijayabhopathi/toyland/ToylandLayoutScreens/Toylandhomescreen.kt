@@ -217,6 +217,62 @@ fun HomeScreen(homeViewModel: ToyViewModel = viewModel()) {
                                 y = 267.dp)
                             .requiredWidth(width = 80.dp)
                             .requiredHeight(height = 34.dp))
+                    Image(
+                        painter = painterResource(id = R.drawable.allim),
+                        contentDescription = "all",
+                        modifier = Modifier
+                            .align(alignment = Alignment.TopStart)
+                            .offset(x = 25.dp,
+                                y = 205.dp)
+                            .clickable {
+                                localContext.startActivity(
+                                    Intent(localContext, DetailedPageActivity::class.java)
+                                )
+                            }
+                            .requiredWidth(width = 82.dp)
+                            .requiredHeight(height = 50.dp))
+                    Image(
+                        painter = painterResource(id = R.drawable.to1),
+                        contentDescription = "Toy1",
+                        modifier = Modifier
+                            .align(alignment = Alignment.TopStart)
+                            .offset(x = 110.dp,
+                                y = 205.dp)
+                            .clickable {
+                                localContext.startActivity(
+                                    Intent(localContext, DetailedPageActivity::class.java)
+                                )
+                            }
+                            .requiredWidth(width = 82.dp)
+                            .requiredHeight(height = 50.dp))
+                    Image(
+                        painter = painterResource(id = R.drawable.to2),
+                        contentDescription = "Toy2",
+                        modifier = Modifier
+                            .align(alignment = Alignment.TopStart)
+                            .offset(x = 175.dp,
+                                y = 200.dp)
+                            .clickable {
+                                localContext.startActivity(
+                                    Intent(localContext, DetailedPageActivity::class.java)
+                                )
+                            }
+                            .requiredWidth(width = 100.dp)
+                            .requiredHeight(height = 50.dp))
+                    Image(
+                        painter = painterResource(id = R.drawable.to3),
+                        contentDescription = "Toy3",
+                        modifier = Modifier
+                            .align(alignment = Alignment.TopStart)
+                            .offset(x = 284.dp,
+                                y = 194.dp)
+                            .requiredWidth(width = 65.dp)
+                            .clickable {
+                                localContext.startActivity(
+                                    Intent(localContext, DetailedPageActivity::class.java)
+                                )
+                            }
+                            .requiredHeight(height = 56.dp))
 
 
                     Image(
