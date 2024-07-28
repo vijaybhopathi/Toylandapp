@@ -141,7 +141,190 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
                     y = 535.dp)
                 .requiredWidth(width = 346.dp)
                 .requiredHeight(height = 91.dp))
+        Box(
+            modifier = Modifier
+                .align(alignment = Alignment.TopStart)
+                .offset(x = 0.dp,
+                    y = 374.dp)
+                .requiredWidth(width = 390.dp)
+                .requiredHeight(height = 470.dp)
+                .clip(shape = RoundedCornerShape(topStart = 60.dp))
+                .background(color = Color(0xfffffcfc)))
 
+        Box(
+            modifier = Modifier
+                .align(alignment = Alignment.TopStart)
+                .offset(x = 63.dp,
+                    y = 71.dp)
+                .requiredWidth(width = 284.dp)
+                .requiredHeight(height = 275.dp)
+                .background(brush = Brush.linearGradient(
+                    0f to Color(0xffd9d9d9).copy(alpha = 0.26f),
+                    1f to Color(0xffd9d9d9),
+                    start = Offset(142f, 0f),
+                    end = Offset(142f, 275f))))
+        Image(
+            painter = painterResource(id = R.drawable.to1),
+            contentDescription = "pngwing 6",
+            modifier = Modifier
+                .align(alignment = Alignment.TopStart)
+                .offset(x = 86.dp,
+                    y = 71.dp)
+                .requiredWidth(width = 241.dp)
+                .requiredHeight(height = 264.dp))
+        Box(
+            modifier = Modifier
+                .align(alignment = Alignment.TopStart)
+                .offset(x = 20.dp,
+                    y = 415.dp)
+                .requiredWidth(width = 100.dp)
+                .requiredHeight(height = 48.dp)
+                .clip(shape = RoundedCornerShape(20.dp))
+                .background(color = Color(0xFF03A9F4)))
+        Box(
+            modifier = Modifier
+                .align(alignment = Alignment.TopStart)
+                .offset(x = 32.dp,
+                    y = 427.dp)
+                .requiredWidth(width = 22.dp)
+                .requiredHeight(height = 24.dp)
+        )
+        //
+
+
+        Box(
+            modifier = Modifier
+                .align(alignment = Alignment.TopStart)
+                .offset(x = 140.dp,
+                    y = 643.dp)
+                .requiredWidth(width = 80.dp)
+                .requiredHeight(height = 76.dp)
+                .clip(shape = RoundedCornerShape(20.dp))
+                .background(color = Color(0xffd9d9d9)))
+
+        Box(
+            modifier = Modifier
+                .align(alignment = Alignment.TopStart)
+                .offset(x = 20.dp,
+                    y = 643.dp)
+                .requiredWidth(width = 80.dp)
+                .requiredHeight(height = 76.dp)
+                .clip(shape = RoundedCornerShape(20.dp))
+                .background(color = Color(0xffd9d9d9)))
+        Box(
+            modifier = Modifier
+                .align(alignment = Alignment.TopStart)
+                .offset(x = 267.dp,
+                    y = 643.dp)
+                .requiredWidth(width = 80.dp)
+                .requiredHeight(height = 76.dp)
+                .clip(shape = RoundedCornerShape(20.dp))
+                .background(color = Color(0xffd9d9d9)))
+        Image(
+            painter = painterResource(id = R.drawable.add_to_cart3),
+            contentDescription = "add-to-cart 3",
+            modifier = Modifier
+                .align(alignment = Alignment.TopStart)
+                .offset(x = 80.dp,
+                    y = 636.dp)
+                .requiredWidth(width = 25.dp)
+                .requiredHeight(height = 23.dp))
+        Image(
+            painter = painterResource(id = R.drawable.add_to_cart3),
+            contentDescription = "add-to-cart 4",
+            modifier = Modifier
+                .align(alignment = Alignment.TopStart)
+                .offset(x = 196.dp,
+                    y = 636.dp)
+                .requiredWidth(width = 25.dp)
+                .requiredHeight(height = 23.dp))
+        Image(
+            painter = painterResource(id = R.drawable.add_to_cart3),
+            contentDescription = "add-to-cart 6",
+            modifier = Modifier
+                .align(alignment = Alignment.TopStart)
+                .offset(x = 196.dp,
+                    y = 636.dp)
+                .requiredWidth(width = 25.dp)
+                .requiredHeight(height = 23.dp))
+        Image(
+            painter = painterResource(id = R.drawable.add_to_cart3),
+            contentDescription = "add-to-cart 5",
+            modifier = Modifier
+                .align(alignment = Alignment.TopStart)
+                .offset(x = 327.dp,
+                    y = 636.dp)
+                .requiredWidth(width = 25.dp)
+                .requiredHeight(height = 23.dp))
+
+        Image(
+            painter = painterResource(id = R.drawable.to3),
+            contentDescription = "",
+            modifier = Modifier
+                .align(alignment = Alignment.TopStart)
+                .offset(x = 33.dp,
+                    y = 648.dp)
+                .requiredWidth(width = 53.dp)
+                .requiredHeight(height = 60.dp))
+
+
+
+
+        Image(
+            painter = painterResource(id = R.drawable.star),
+            contentDescription = "",
+            modifier = Modifier
+                .align(alignment = Alignment.TopStart)
+                .offset(x = 53.dp,
+                    y = 348.dp)
+                .requiredWidth(width = 53.dp)
+                .requiredHeight(height = 60.dp))
+
+        Image(
+            painter = painterResource(id = R.drawable.to1),
+            contentDescription = "",
+            modifier = Modifier
+                .align(alignment = Alignment.TopStart)
+                .offset(x = 153.dp,
+                    y = 648.dp)
+                .requiredWidth(width = 53.dp)
+                .requiredHeight(height = 60.dp))
+        Image(
+            painter = painterResource(id = R.drawable.to2),
+            contentDescription = "",
+            modifier = Modifier
+                .align(alignment = Alignment.TopStart)
+                .offset(x = 270.dp,
+                    y = 654.dp)
+                .requiredWidth(width = 84.dp)
+                .requiredHeight(height = 55.dp))
+        val context = LocalContext.current
+        Box(
+            modifier = Modifier
+                .align(alignment = Alignment.TopStart)
+                .offset(x = 45.dp,
+                    y = 730.dp)
+                .requiredWidth(width = 269.dp)
+                .requiredHeight(height = 52.dp)
+                .clickable {
+                    context.startActivity(Intent(context,OrdersActivity::class.java))
+
+                }
+                .clip(shape = RoundedCornerShape(30.dp))
+                .background(color = Color(0xFF03A9F4)))
+        Text(
+            text = "Add to cart",
+            color = Color.White,
+            textAlign = TextAlign.Center,
+            style = TextStyle(
+                fontSize = 20.sp,
+                fontWeight = FontWeight.Bold),
+            modifier = Modifier
+                .align(alignment = Alignment.TopStart)
+                .offset(x = 105.dp,
+                    y = 745.dp)
+                .requiredWidth(width = 146.dp)
+                .requiredHeight(height = 31.dp))
 
 
     }
