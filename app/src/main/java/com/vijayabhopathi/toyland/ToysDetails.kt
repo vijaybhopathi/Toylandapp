@@ -104,6 +104,46 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
                     0.92f to Color(0xffd9d9d9).copy(alpha = 0.74f),
                     start = Offset(119f, 0f),
                     end = Offset(119f, 222f))))
+        Text(
+            text = " 4.0",
+            color = Color(0xfffbf7f7),
+            textAlign = TextAlign.Center,
+            style = TextStyle(
+                fontSize = 20.sp,
+                fontWeight = FontWeight.Bold),
+            modifier = Modifier
+                .align(alignment = Alignment.TopStart)
+                .offset(x = 44.dp,
+                    y = 422.dp)
+                .requiredWidth(width = 51.dp)
+                .requiredHeight(height = 40.dp))
+        Text(
+            text = "£40",
+            color = Color(0xFF03A9F4),
+            textAlign = TextAlign.Center,
+            style = TextStyle(
+                fontSize = 24.sp,
+                fontWeight = FontWeight.Bold),
+            modifier = Modifier
+                .align(alignment = Alignment.TopStart)
+                .offset(x = 313.dp,
+                    y = 424.dp))
+        Text(
+            text = "Dolls: Lifelike figures that nurture caregiving instincts and imaginative storytelling. Encourage social and emotional development in children.",
+            color = Color(0xFFA0AFB6),
+            textAlign = TextAlign.Center,
+            style = TextStyle(
+                fontSize = 14.sp,
+                fontWeight = FontWeight.Bold),
+            modifier = Modifier
+                .align(alignment = Alignment.TopStart)
+                .offset(x = 5.dp,
+                    y = 535.dp)
+                .requiredWidth(width = 346.dp)
+                .requiredHeight(height = 91.dp))
+
+
+
     }
 }
 
