@@ -185,7 +185,38 @@ fun HomeScreen(homeViewModel: ToyViewModel = viewModel()) {
                             .offset(x = 53.dp,
                                 y = 264.dp))
 
-
+                    Text(
+                        text = "Toy1",
+                        color = Color.Black,
+                        textAlign = TextAlign.Center,
+                        style = TextStyle(
+                            fontSize = 18.sp),
+                        modifier = Modifier
+                            .align(alignment = Alignment.TopStart)
+                            .offset(x = 123.dp,
+                                y = 265.dp))
+                    Text(
+                        text = "Toy2",
+                        color = Color.Black,
+                        textAlign = TextAlign.Center,
+                        style = TextStyle(
+                            fontSize = 18.sp),
+                        modifier = Modifier
+                            .align(alignment = Alignment.TopStart)
+                            .offset(x = 211.dp,
+                                y = 266.dp))
+                    Text(
+                        text = "Toy3",
+                        color = Color.Black,
+                        textAlign = TextAlign.Center,
+                        style = TextStyle(
+                            fontSize = 18.sp),
+                        modifier = Modifier
+                            .align(alignment = Alignment.TopStart)
+                            .offset(x = 279.dp,
+                                y = 267.dp)
+                            .requiredWidth(width = 80.dp)
+                            .requiredHeight(height = 34.dp))
 
 
                     Image(
