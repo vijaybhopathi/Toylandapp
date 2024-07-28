@@ -63,7 +63,47 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
                 start = Offset(195f, 0f),
                 end = Offset(195f, 844f)))
     ) {
-
+        Text(
+            text = "",
+            color = Color.Black,
+            textAlign = TextAlign.Center,
+            style = TextStyle(
+                fontSize = 20.sp,
+                fontWeight = FontWeight.Bold),
+            modifier = Modifier
+                .align(alignment = Alignment.TopStart)
+                .offset(x = 28.dp,
+                    y = 607.dp))
+        Text(
+            text = "Toys 1 ",
+            color = Color.Black.copy(alpha = 0.77f),
+            textAlign = TextAlign.Center,
+            style = TextStyle(
+                fontSize = 24.sp,
+                fontWeight = FontWeight.Bold),
+            modifier = Modifier
+                .align(alignment = Alignment.TopStart)
+                .offset(x = 22.dp,
+                    y = 481.dp))
+        Box(
+            modifier = Modifier
+                .align(alignment = Alignment.TopStart)
+                .offset(x = 86.dp,
+                    y = 97.dp)
+                .requiredWidth(width = 238.dp)
+                .requiredHeight(height = 222.dp)
+                .background(brush = Brush.linearGradient(
+                    0f to Color(0xffd9d9d9),
+                    0.12f to Color(0xffd9d9d9).copy(alpha = 0.24f),
+                    0.24f to Color(0xffd9d9d9).copy(alpha = 0.09f),
+                    0.36f to Color(0xffd9d9d9).copy(alpha = 0.03f),
+                    0.49f to Color(0xffd9d9d9),
+                    0.61f to Color(0xffd9d9d9).copy(alpha = 0.02f),
+                    0.69f to Color(0xffd9d9d9),
+                    0.79f to Color(0xffd9d9d9).copy(alpha = 0.13f),
+                    0.92f to Color(0xffd9d9d9).copy(alpha = 0.74f),
+                    start = Offset(119f, 0f),
+                    end = Offset(119f, 222f))))
     }
 }
 
