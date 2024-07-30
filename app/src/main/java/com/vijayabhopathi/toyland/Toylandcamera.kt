@@ -122,7 +122,117 @@ class CameraActivity : ComponentActivity() {
             var email by remember { mutableStateOf("") }
             var location by remember { mutableStateOf("") }
 
+            ToyTheme {
+                Box(modifier = Modifier.fillMaxSize()) {
+                    Column(
+                        modifier = Modifier.fillMaxSize(),
+                        verticalArrangement = Arrangement.Center,
+                        horizontalAlignment = Alignment.CenterHorizontally
+                    ) {
 
+                        if (isEditing) {
+                            // Editable input fields
+                            OutlinedTextField(
+                                value = name,
+                                onValueChange = { name = it },
+                                label = { Text("Name") },
+                                modifier = Modifier.fillMaxWidth().padding(16.dp)
+                            )
+
+                            OutlinedTextField(
+                                value = email,
+                                onValueChange = { email = it },
+                                label = { Text("Email") },
+                                modifier = Modifier.fillMaxWidth().padding(16.dp)
+                            )
+
+                            OutlinedTextField(
+                                value = location,
+                                onValueChange = { location = it },
+                                label = { Text("Location") },
+                                modifier = Modifier.fillMaxWidth().padding(16.dp)
+                            )
+                        } else {
+                            // Display static text
+                            HeadingTextComponent(value = "Name: $name")
+                            HeadingTextComponent(value = "Email: $email")
+                            HeadingTextComponent(value = "Location: $location")
+                        }
+
+                        TakePhotoButton(
+                            cameraPermissionStatus = cameraPermissionStatus,
+                            requestPermissionLauncher = requestPermissionLauncher,
+                            takePhoto = takePhoto
+                        )
+
+                        if (hasPhoto) {
+                            val bitmap = getThumbnail(photoUriState.value)
+                            if (bitmap != null) {
+                                Image(
+                                    bitmap = bitmap,
+                                    contentDescription = "Thumbnail of Save Photo",
+                                    modifier = Modifier
+                                        .width(400.dp)
+                                        .height(200.dp)
+                                        .clickable {
+                                            shouldShowFullImage = true
+                                        }
+                                )
+                            }
+                        }
+
+                        Row(
+                            horizontalArrangement = Arrangement.SpaceEvenly,
+                            modifier = Modifier.fillMaxWidth().padding(16.dp)
+                        ) {
+                            Button(onClick = { isEditing = true }) {
+                                Text("Edit")
+                            }
+
+                            Button(onClick = { isEditing = false }) {
+                                Text("Save")
+                            }
+
+                            Button(onClick = { finish() }) {
+                                Text("Back")
+                            }
+                        }
+                    }
+
+                    if (shouldShowFullImage && hasPhoto) {
+                        val bitmap = getFullImage(photoUriState.value)
+                        if (bitmap != null) {
+                            Box(
+                                modifier = Modifier
+                                    .fillMaxSize()
+                                    .clickable {
+                                        shouldShowFullImage = false
+                                    }) {
+                                Image(
+                                    bitmap = bitmap,
+                                    contentDescription = "Full image of Save Photo",
+                                    modifier = Modifier.align(Alignment.Center)
+                                )
+                                androidx.compose.material.Surface(
+                                    modifier = Modifier
+                                        .background(androidx.compose.material.MaterialTheme.colors.background)
+                                        .align(Alignment.Center)
+                                        .padding(8.dp)
+                                ) {
+                                    androidx.compose.material.Text(
+                                        text = "Click to Close",
+                                        style = androidx.compose.material.MaterialTheme.typography.h4.copy(
+                                            fontWeight = FontWeight.ExtraBold
+                                        )
+                                    )
+                                }
+                            }
+                        } else {
+                            shouldShowFullImage = false
+                        }
+                    }
+                }
+            }
         }
     }
 
