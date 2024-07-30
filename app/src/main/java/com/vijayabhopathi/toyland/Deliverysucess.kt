@@ -50,6 +50,48 @@ class Deliverysucess : ComponentActivity() {
                         .fillMaxSize()
                         .padding(28.dp)
                 ) {
+                    Column(modifier = Modifier
+                        .fillMaxSize()
+                        .background(gradient45),
+                        verticalArrangement = Arrangement.Center,
+                        horizontalAlignment = Alignment.CenterHorizontally) {
+                        HeadingTextComponent(value = "Order Delivery Successfully")
+                        Spacer(modifier = Modifier.height(25.dp))
+                        Spacer(modifier = Modifier.height(105.dp))
+                        val toy = ""
+                        Button(
+                            modifier = Modifier
+                                .wrapContentWidth()
+                                .heightIn(48.dp),
+                            onClick = {
+                                context.startActivity(Intent(context, WelcomeActivity::class.java)
+                                    .putExtra("toy_data", toy))
+                            },
+                            contentPadding = PaddingValues(),
+                            colors = ButtonDefaults.buttonColors(Color.Cyan),
+                            shape = RoundedCornerShape(50.dp),
+                        ) {
+                            Box(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .heightIn(48.dp)
+                                    .background(
+                                        brush = Brush.horizontalGradient(listOf(Primary, Primary)),
+                                        shape = RoundedCornerShape(20.dp)),
+
+                                contentAlignment = Alignment.Center
+                            ) {
+                                Text(
+                                    text = "Back to Home",
+                                    fontSize = 18.sp,
+                                    color = Color.White,
+                                    fontWeight = FontWeight.Bold
+                                )
+
+                            }
+
+                        }
+                    }
 
                 }
         }
