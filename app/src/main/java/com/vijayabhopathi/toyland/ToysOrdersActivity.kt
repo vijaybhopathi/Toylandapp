@@ -135,7 +135,23 @@ fun Greeting2(name: String, modifier: Modifier = Modifier) {
                                 .requiredHeight(height = 40.dp)
                                 .clip(shape = RoundedCornerShape(8.dp))
                                 .background(color = Color.White))
-                      //textid
+
+                        Text(
+                            text = "Order Id : #456789",
+                            color = Color(0xff222325),
+                            textAlign = TextAlign.Center,
+                            lineHeight = 10.46.em,
+                            style = TextStyle(
+                                fontSize = 13.sp,
+                                letterSpacing = (-0.24).sp
+                            ),
+                            modifier = Modifier
+                                .align(alignment = Alignment.TopStart)
+                                .offset(
+                                    x = 15.dp,
+                                    y = 11.dp
+                                )
+                        )
                     }
                 }
                 Box(
@@ -159,7 +175,22 @@ fun Greeting2(name: String, modifier: Modifier = Modifier) {
                                 .requiredWidth(width = 279.dp)
                                 .requiredHeight(height = 36.dp)
                         ) {
-                          //adtext
+
+
+
+                            Text(
+                                text = "10/2, uk",
+                                color = Color(0xff222325),
+                                lineHeight = 13.17.em,
+                                style = TextStyle(
+                                    fontSize = 12.sp,
+                                    fontWeight = FontWeight.Medium,
+                                    letterSpacing = (-0.24).sp
+                                ),
+                                modifier = Modifier
+                                    .requiredWidth(width = 279.dp)
+                                    .requiredHeight(height = 36.dp)
+                            )
                         }
                     }
 //
@@ -346,6 +377,11 @@ fun Greeting2(name: String, modifier: Modifier = Modifier) {
                             .clip(shape = RoundedCornerShape(8.dp))
                             .background(color = Color(0xFF03A9F4)))
                 }
+
+
+
+
+
 
                 Text(
                     text = "Delivery Completed ",
